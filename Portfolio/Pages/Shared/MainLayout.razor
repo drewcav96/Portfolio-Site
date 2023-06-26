@@ -1,0 +1,85 @@
+﻿@inherits LayoutComponentBase
+
+<nav class="navbar is-fixed-top is-transparent">
+    <!-- Start -->
+    <div class="navbar-brand">
+        <!-- Brand -->
+        <a href="/" class="navbar-item">
+            Drew Cavanaugh
+        </a>
+
+        <!-- Responsive burger -->
+        <div class="navbar-burger" data-target="navbar-site">
+            <span /><span /><span />
+        </div>
+    </div>
+
+    <!-- Menu -->
+    <div id="navbar-site" class="navbar-menu">
+        <div class="navbar-start">
+            <div class="navbar-item has-dropdown is-hoverable">
+                <!-- Projects Landing page -->
+                <NavLink href="/projects" class="navbar-link"
+                         ActiveClass="is-active">
+                    Projects
+                </NavLink>
+                <div class="navbar-dropdown is-boxed">
+                    <!-- Invoice Indexting project -->
+                    <NavLink href="/projects/invoice-indexing" class="navbar-item"
+                             ActiveClass="is-active">
+                        Invoice Indexing
+                    </NavLink>
+
+                    <!-- OEM Inventory Management project -->
+                    <NavLink href="/projects/oem-inventory" class="navbar-item"
+                             ActiveClass="is-active">
+                        OEM Inventory Management
+                    </NavLink>
+
+                    <!-- Approval Tracking project -->
+                    <NavLink href="/projects/approval-tracking" class="navbar-item"
+                             ActiveClass="is-active">
+                        Repair Approvals & Tracking
+                    </NavLink>
+
+                    <!-- Parts Requisitons -->
+                    <NavLink href="/projects/parts-ordering" class="navbar-item"
+                             ActiveClass="is-active">
+                        Parts Requisitions
+                    </NavLink>
+
+                    <!-- Treasury Services -->
+                    <NavLink href="/projects/treasury-services" class="navbar-item"
+                             ActiveClass="is-active">
+                        Treasury Services
+                    </NavLink>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- End -->
+    <div class="navbar-end">
+        <div class="navbar-item">
+            <div class="field is-grouped">
+                <!-- Download Resume -->
+                <p class="control">
+                    <a href="/dcresume.pdf" class="button is-primary" download="Drew Cavanaugh Resume.pdf">
+                        Resume
+                    </a>
+                </p>
+
+                <!-- Site Repository -->
+                <p class="control">
+                    <a href="https://github.com/drewcav96/Portfolio-Site" class="button is-success">
+                        Site Repo
+                    </a>
+                </p>
+            </div>
+        </div>
+    </div>
+</nav>
+
+<article class="container">
+    @Body
+</article>

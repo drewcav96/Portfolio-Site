@@ -1,0 +1,8 @@
+﻿body {
+    height: 100vh;
+    background: linear-gradient(to bottom right, #0a0019, #002626);
+}
+
+nav.is-transparent {
+    background: rgb(255, 255, 255, 0.1);
+}
