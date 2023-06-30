@@ -1,12 +1,149 @@
 ﻿@page "/"
 
-<section class="hero">
-    <div class="hero-body">
-        <p class="title has-text-white-ter">
-            Drew Cavanaugh
+<Hero>
+    <Title>
+        Hello, world!
+    </Title>
+    <Subtitle>
+        I&rsquo;m Drew Cavanaugh, a @_age-year-old Software Engineer.
+    </Subtitle>
+</Hero>
+
+<!-- Bio -->
+<Section>
+    <Title>
+        About Me
+    </Title>
+    <Content>
+        <p class="my-4">
+            My software developing journey began during my earliest memories of grade school.
+            Learning how to build UIs and code logic behind them fascinates me to this day.
+            I quickly discovered that there isn&rsquo;t a problem out there that cannot be solved with a software solution.
         </p>
-        <p class="subtitle has-text-grey-lighter">
-            @_age years old Full-Stack Software Engineer
+
+        <p class="my-4">
+            My expertise is designing full-scale software solutions to complex business problems, both forward-facing to clients and internally for employees.
+            With a decade in .NET experience as a hobby and 4+ years professionally, I am very comfortable with object-oreiented programming, data structures, test-driven development, and more.
+            Though much of my experience is in .NET, I am familiar with other frameworks and eager to apply my professional experience to learning new practices.
         </p>
+
+        <p class="my-4">
+            I love to travel! I have explored National Parks, monuments, and attractions in over two-thirds of our United States as well as parts of Canada, and Mexico.
+            I look forward to visiting the site of my heritage in Scotland one day, and hope to explore much of the Eastern World throughout my life.
+            My other hobbies involve following
+            <a href="https://youtu.be/8GKmkD1pUG0" title="War Eagle!" target="_blank">
+                collegiate sports
+            </a>
+            and hitting the gym after work.
+        </p>
+    </Content>
+</Section>
+
+<!-- Skills -->
+<div class="tile is-ancestor">
+    <div class="tile is-vertical">
+        <div class="tile">
+            <div class="tile is-parent is-vertical">
+                <!-- Hard Skills -->
+                <article class="tile is-child notification is-primary">
+                    <p class="title">
+                        Hard Skills
+                    </p>
+                    <ul>
+                        <li>
+                            Software Design &amp; Testing
+                        </li>
+                        <li>
+                            End User Support
+                        </li>
+                        <li>
+                            Debugging &amp; Troubleshooting
+                        </li>
+                        <li>
+                            Version Control (Git)
+                        </li>
+                        <li>
+                            IIS &amp; Apache Hosting
+                        </li>
+                        <li>
+                            Endpoint Routing &amp; Security
+                        </li>
+                        <li>
+                            Reporting &amp; Data Analytics
+                        </li>
+                    </ul>
+                </article>
+
+                <!-- Soft Skills -->
+                <article class="tile is-child notification is-info">
+                    <p class="title">
+                        Soft Skills
+                    </p>
+                    <ul>
+                        <li>
+                            Attention to Detail
+                        </li>
+                        <li>
+                            Teamwork &amp; Collaboration
+                        </li>
+                        <li>
+                            Critical Thinking
+                        </li>
+                        <li>
+                            Desire to Understand Your Business
+                        </li>
+                    </ul>
+                </article>
+            </div>
+            <div class="tile is-parent is-vertical">
+                <!-- Back End Skills -->
+                <article class="tile is-child notification is-warning">
+                    <p class="title">
+                        Back-End Skills
+                    </p>
+                    <ul>
+                        <li>
+                            Proficiency in: C#, Java, T-SQL, MySQL
+                        </li>
+                        <li>
+                            Familiar with: Python, C/C++, Ruby, Go
+                        </li>
+                        <li>
+                            .NET Framework, .NET Core
+                        </li>
+                        <li>
+                            Database Design &amp; Normalization
+                        </li>
+                        <li>
+                            Entity Framework, LINQ
+                        </li>
+                    </ul>
+                </article>
+
+                <!-- Front-End Skills -->
+                <article class="tile is-child notification is-danger">
+                    <p class="title">
+                        Front-End Skills
+                    </p>
+                    <ul>
+                        <li>
+                            Proficiency in: HTML5, CSS, JavaScript
+                        </li>
+                        <li>
+                            ASP.NET MVC, Blazor
+                        </li>
+                        <li>
+                            Flux/Redux Architecture
+                        </li>
+                        <li>
+                            Practical UI/UX Design
+                        </li>
+                        <li>
+                            Responsive and Single-Page Web Apps
+                        </li>
+                    </ul>
+                </article>
+            </div>
+        </div>
     </div>
-</section>
+</div>

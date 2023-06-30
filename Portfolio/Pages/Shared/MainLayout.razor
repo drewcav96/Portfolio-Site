@@ -1,6 +1,6 @@
 ﻿@inherits LayoutComponentBase
 
-<nav class="navbar is-fixed-top is-transparent">
+<nav class="navbar is-fixed-top is-dark is-transparent">
     <!-- Start -->
     <div class="navbar-brand">
         <!-- Brand -->
@@ -9,13 +9,13 @@
         </a>
 
         <!-- Responsive burger -->
-        <div class="navbar-burger" data-target="navbar-site">
+        <div class="navbar-burger" data-target="navbar-site" @onclick=NavbarBurgerOnClick>
             <span /><span /><span />
         </div>
     </div>
 
     <!-- Menu -->
-    <div id="navbar-site" class="navbar-menu">
+    <div id="navbar-site" class="navbar-menu @NavbarActiveCssClass">
         <div class="navbar-start">
             <div class="navbar-item has-dropdown is-hoverable">
                 <!-- Projects Landing page -->
@@ -23,7 +23,7 @@
                          ActiveClass="is-active">
                     Projects
                 </NavLink>
-                <div class="navbar-dropdown is-boxed">
+                <div class="navbar-dropdown has-background-dark is-boxed">
                     <!-- Invoice Indexting project -->
                     <NavLink href="/projects/invoice-indexing" class="navbar-item"
                              ActiveClass="is-active">
@@ -47,12 +47,6 @@
                              ActiveClass="is-active">
                         Parts Requisitions
                     </NavLink>
-
-                    <!-- Treasury Services -->
-                    <NavLink href="/projects/treasury-services" class="navbar-item"
-                             ActiveClass="is-active">
-                        Treasury Services
-                    </NavLink>
                 </div>
             </div>
         </div>
@@ -61,21 +55,15 @@
     <!-- End -->
     <div class="navbar-end">
         <div class="navbar-item">
-            <div class="field is-grouped">
-                <!-- Download Resume -->
-                <p class="control">
-                    <a href="/dcresume.pdf" class="button is-primary" download="Drew Cavanaugh Resume.pdf">
-                        Resume
-                    </a>
-                </p>
+            <!-- Download Resume -->
+            <a href="/dcresume.pdf" class="navbar-item" download="Drew Cavanaugh Resume.pdf">
+                Resume
+            </a>
 
-                <!-- Site Repository -->
-                <p class="control">
-                    <a href="https://github.com/drewcav96/Portfolio-Site" class="button is-success">
-                        Site Repo
-                    </a>
-                </p>
-            </div>
+            <!-- Site Repository -->
+            <a href="https://github.com/drewcav96/Portfolio-Site" class="navbar-item">
+                GitHub
+            </a>
         </div>
     </div>
 </nav>

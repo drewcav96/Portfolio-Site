@@ -5,6 +5,17 @@
     {
       "library": "bulma@0.9.4",
       "destination": "wwwroot/lib/bulma/"
+    },
+    {
+      "provider": "jsdelivr",
+      "library": "bulma-carousel@4.0.24",
+      "destination": "wwwroot/lib/bulma-carousel/"
     }
-  ]
+  ,
+{
+  "provider": "cdnjs",
+  "library": "animate.css@4.1.1",
+  "destination": "wwwroot/lib/animate.css/"
+}
+]
 }

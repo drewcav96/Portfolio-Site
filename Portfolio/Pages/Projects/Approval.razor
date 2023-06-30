@@ -1,0 +1,69 @@
+﻿@page "/projects/approval-tracking"
+
+<Hero>
+    <Title>
+        Repair Approvals &amp; Tracking
+    </Title>
+    <Subtitle>
+        Client web portal for reviewing, approving, and tracking repairs.
+    </Subtitle>
+</Hero>
+
+<!-- Summary -->
+<Section>
+    <Title>
+        Project Summary
+    </Title>
+    <Content>
+        <p class="my-4">
+            <span class="has-text-weight-semibold">
+                Operational Goals:
+            </span>
+            <ul>
+                <li>
+                    Provide customer with a portal to review and approve repair estimates exceeding contractual spending thresholds.
+                </li>
+                <li>
+                    Allow customer to see line-item details about labor, services, and parts are required for a repair.
+                </li>
+                <li>
+                    Enable email notifications to customer and branch manager when estimates are issued / approved and repair begins / finishes.
+                </li>
+                <li>
+                    Assign user approving responsibilities to specific units according to customer oversight policy.
+                </li>
+                <li>
+                    Track timestamps of status updates for clear and concise repair lifecycle reports.
+                </li>
+            </ul>
+        </p>
+
+        <p class="my-4">
+            <span class="has-text-weight-semibold">
+                Technologies Used:
+            </span>
+            <ul>
+                <li>
+                    ASP.NET Core MVC 6.x
+                </li>
+                <li>
+                    Active Directory (employees) or Identity (customers) Authentication
+                </li>
+                <li>
+                    Policy &amp; Resource-based Authorization for Customer / Unit isolation
+                </li>
+                <li>
+                    SQL Server with Entity Framework data layer
+                </li>
+                <li>
+                    Bootstrap UI/UX design
+                </li>
+                <li>
+                    3PLs: LinqKit, MailKit, RtfPipe, Serilog
+                </li>
+            </ul>
+        </p>
+    </Content>
+</Section>
+
+<!-- Carousel -->
