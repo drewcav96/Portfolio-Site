@@ -1,73 +1,10 @@
 ﻿@inherits LayoutComponentBase
 
-<nav class="navbar is-fixed-top is-dark is-transparent">
-    <!-- Start -->
-    <div class="navbar-brand">
-        <!-- Brand -->
-        <a href="/" class="navbar-item">
-            Drew Cavanaugh
-        </a>
-
-        <!-- Responsive burger -->
-        <div class="navbar-burger" data-target="navbar-site" @onclick=NavbarBurgerOnClick>
-            <span /><span /><span />
-        </div>
-    </div>
-
-    <!-- Menu -->
-    <div id="navbar-site" class="navbar-menu @NavbarActiveCssClass">
-        <div class="navbar-start">
-            <div class="navbar-item has-dropdown is-hoverable">
-                <!-- Projects Landing page -->
-                <NavLink href="/projects" class="navbar-link"
-                         ActiveClass="is-active">
-                    Projects
-                </NavLink>
-                <div class="navbar-dropdown has-background-dark is-boxed">
-                    <!-- Invoice Indexting project -->
-                    <NavLink href="/projects/invoice-indexing" class="navbar-item"
-                             ActiveClass="is-active">
-                        Invoice Indexing
-                    </NavLink>
-
-                    <!-- OEM Inventory Management project -->
-                    <NavLink href="/projects/oem-inventory" class="navbar-item"
-                             ActiveClass="is-active">
-                        OEM Inventory Management
-                    </NavLink>
-
-                    <!-- Approval Tracking project -->
-                    <NavLink href="/projects/approval-tracking" class="navbar-item"
-                             ActiveClass="is-active">
-                        Repair Approvals & Tracking
-                    </NavLink>
-
-                    <!-- Parts Requisitons -->
-                    <NavLink href="/projects/parts-ordering" class="navbar-item"
-                             ActiveClass="is-active">
-                        Parts Requisitions
-                    </NavLink>
-                </div>
-            </div>
-        </div>
-    </div>
-
-    <!-- End -->
-    <div class="navbar-end">
-        <div class="navbar-item">
-            <!-- Download Resume -->
-            <a href="/dcresume.pdf" class="navbar-item" download="Drew Cavanaugh Resume.pdf">
-                Resume
-            </a>
-
-            <!-- Site Repository -->
-            <a href="https://github.com/drewcav96/Portfolio-Site" class="navbar-item">
-                GitHub
-            </a>
-        </div>
-    </div>
-</nav>
-
-<article class="container">
-    @Body
-</article>
+<Layout>
+    <LayoutHeader Fixed>
+        <TopMenu />
+    </LayoutHeader>
+    <LayoutContent Padding=Padding.Is4.OnX>
+        @Body
+    </LayoutContent>
+</Layout>
