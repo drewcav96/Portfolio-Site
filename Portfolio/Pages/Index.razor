@@ -1,149 +1,150 @@
 ﻿@page "/"
 
-<Hero>
-    <Title>
-        Hello, world!
-    </Title>
-    <Subtitle>
-        I&rsquo;m Drew Cavanaugh, a @_age-year-old Software Engineer.
-    </Subtitle>
-</Hero>
+<!-- Intro -->
+<Heading Size=HeadingSize.Is2 Margin=Margin.Is2.OnY TextColor=TextColor.Light>
+    Hello, world!
+</Heading>
+<Lead Margin=Margin.Is3.OnY>
+    I am Drew Cavanaugh, a @_age-year-old Software Engineer.
+</Lead>
 
-<!-- Bio -->
-<Section>
-    <Title>
-        About Me
-    </Title>
-    <Content>
-        <p class="my-4">
+<!-- About -->
+<Row>
+    <Column Margin=Margin.Is3.OnY>
+        <Paragraph Margin=Margin.Is2.OnY>
             My software developing journey began back in grade school when I first showed interest in making computer games.
             Coding logic, designing UIs, and packaging programs for release is what drives me to keep learning.
             My passion is solving problems with customized software solutions.
-        </p>
-
-        <p class="my-4">
+        </Paragraph>
+        <Paragraph Margin=Margin.Is2.OnY>
             My expertise is designing full-scale software solutions to complex business problems, both forward-facing to clients and internally for employees.
             With a decade in .NET experience as a hobby and 4+ years professionally, I am very comfortable with object-oriented programming, data structures, test-driven development, and more.
             Though much of my experience is in .NET, I am familiar with other frameworks and eager to apply my professional experience to learn new practices.
-        </p>
-
-        <p class="my-4">
+        </Paragraph>
+        <Paragraph Margin=Margin.Is2.OnY>
             To know more about me, I love to travel! I have explored National Parks, monuments, and attractions in over two-thirds of the United States as well as parts of Canada, and Mexico.
             I look forward to visiting Scotland one day to explore my heritage, and hope to explore much of the Eastern world throughout the rest of my life.
             My other hobbies involve following
-            <a href="https://youtu.be/8GKmkD1pUG0" title="War Eagle!" target="_blank">
-                collegiate sports
-            </a>
+            <Tooltip Text="War Eagle!" Inline>
+                <Anchor To="https://youtu.be/8GKmkD1pUG0" Target=Target.Blank>
+                    collegiate sports
+                </Anchor>
+            </Tooltip>
             and hitting the gym after work.
-        </p>
-    </Content>
-</Section>
+        </Paragraph>
+    </Column>
+</Row>
+
 
 <!-- Skills -->
-<div class="tile is-ancestor">
-    <div class="tile is-vertical">
-        <div class="tile">
-            <div class="tile is-parent is-vertical">
+<Div Class="tile is-ancestor">
+    <Div Class="tile is-vertical">
+        <Div Class="tile">
+            <Div Class="tile is-parent is-vertical">
                 <!-- Hard Skills -->
-                <article class="tile is-child notification is-primary">
-                    <p class="title">
+                <Div Class="tile is-child notification is-primary">
+                    <Heading Size=HeadingSize.Is4>
+                        <Icon Name=Blazorise.Icons.FontAwesome.FontAwesomeIcons.Toolbox />
                         Hard Skills
-                    </p>
-                    <ul>
-                        <li>
+                    </Heading>
+                    <UnorderedList>
+                        <UnorderedListItem>
                             Software Design &amp; Testing
-                        </li>
-                        <li>
+                        </UnorderedListItem>
+                        <UnorderedListItem>
                             End User Support
-                        </li>
-                        <li>
+                        </UnorderedListItem>
+                        <UnorderedListItem>
                             Debugging &amp; Troubleshooting
-                        </li>
-                        <li>
+                        </UnorderedListItem>
+                        <UnorderedListItem>
                             Version Control (Git)
-                        </li>
-                        <li>
+                        </UnorderedListItem>
+                        <UnorderedListItem>
                             IIS &amp; Apache Hosting
-                        </li>
-                        <li>
+                        </UnorderedListItem>
+                        <UnorderedListItem>
                             Endpoint Routing &amp; Security
-                        </li>
-                        <li>
+                        </UnorderedListItem>
+                        <UnorderedListItem>
                             Reporting &amp; Data Analytics
-                        </li>
-                    </ul>
-                </article>
+                        </UnorderedListItem>
+                    </UnorderedList>
+                </Div>
 
                 <!-- Soft Skills -->
-                <article class="tile is-child notification is-info">
-                    <p class="title">
+                <Div Class="tile is-child notification is-info">
+                    <Heading Size=HeadingSize.Is4>
+                        <Icon Name=Blazorise.Icons.FontAwesome.FontAwesomeIcons.Handshake />
                         Soft Skills
-                    </p>
-                    <ul>
-                        <li>
+                    </Heading>
+                    <UnorderedList>
+                        <UnorderedListItem>
                             Attention to Detail
-                        </li>
-                        <li>
+                        </UnorderedListItem>
+                        <UnorderedListItem>
                             Teamwork &amp; Collaboration
-                        </li>
-                        <li>
+                        </UnorderedListItem>
+                        <UnorderedListItem>
                             Critical Thinking
-                        </li>
-                        <li>
+                        </UnorderedListItem>
+                        <UnorderedListItem>
                             Desire to Understand Your Business
-                        </li>
-                    </ul>
-                </article>
-            </div>
-            <div class="tile is-parent is-vertical">
+                        </UnorderedListItem>
+                    </UnorderedList>
+                </Div>
+            </Div>
+            <Div Class="tile is-parent is-vertical">
                 <!-- Back End Skills -->
-                <article class="tile is-child notification is-warning">
-                    <p class="title">
+                <Div Class="tile is-child notification is-warning">
+                    <Heading Size=HeadingSize.Is4>
+                        <Icon Name=Blazorise.Icons.FontAwesome.FontAwesomeIcons.Code />
                         Back-End Skills
-                    </p>
-                    <ul>
-                        <li>
+                    </Heading>
+                    <UnorderedList>
+                        <UnorderedListItem>
                             Proficiency in: C#, Java, T-SQL, MySQL
-                        </li>
-                        <li>
+                        </UnorderedListItem>
+                        <UnorderedListItem>
                             Familiar with: Python, C/C++, Ruby, Go
-                        </li>
-                        <li>
+                        </UnorderedListItem>
+                        <UnorderedListItem>
                             .NET Framework, .NET Core
-                        </li>
-                        <li>
+                        </UnorderedListItem>
+                        <UnorderedListItem>
                             Database Design &amp; Normalization
-                        </li>
-                        <li>
+                        </UnorderedListItem>
+                        <UnorderedListItem>
                             Entity Framework, LINQ
-                        </li>
-                    </ul>
-                </article>
+                        </UnorderedListItem>
+                    </UnorderedList>
+                </Div>
 
                 <!-- Front-End Skills -->
-                <article class="tile is-child notification is-danger">
-                    <p class="title">
+                <Div Class="tile is-child notification is-danger">
+                    <Heading Size=HeadingSize.Is4>
+                        <Icon Name=Blazorise.Icons.FontAwesome.FontAwesomeIcons.PencilRuler />
                         Front-End Skills
-                    </p>
-                    <ul>
-                        <li>
+                    </Heading>
+                    <UnorderedList>
+                        <UnorderedListItem>
                             Proficiency in: HTML5, CSS, JavaScript
-                        </li>
-                        <li>
+                        </UnorderedListItem>
+                        <UnorderedListItem>
                             ASP.NET MVC, Blazor
-                        </li>
-                        <li>
+                        </UnorderedListItem>
+                        <UnorderedListItem>
                             Flux/Redux Architecture
-                        </li>
-                        <li>
+                        </UnorderedListItem>
+                        <UnorderedListItem>
                             Practical UI/UX Design
-                        </li>
-                        <li>
+                        </UnorderedListItem>
+                        <UnorderedListItem>
                             Responsive and Single-Page Web Apps
-                        </li>
-                    </ul>
-                </article>
-            </div>
-        </div>
-    </div>
-</div>
+                        </UnorderedListItem>
+                    </UnorderedList>
+                </Div>
+            </Div>
+        </Div>
+    </Div>
+</Div>

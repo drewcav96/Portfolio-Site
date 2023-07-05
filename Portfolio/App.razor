@@ -1,18 +1,20 @@
-﻿<Router AppAssembly="@typeof(App).Assembly">
-    <Found Context="routeData">
-        <LayoutView Layout=typeof(MainLayout)>
-            <TransitionableRoutePrimary RouteData=routeData ForgetStateOnTransition=false>
-                <TransitionableRouteView DefaultLayout=typeof(TransitionLayout) />
-            </TransitionableRoutePrimary>
-            <TransitionableRouteSecondary RouteData=routeData ForgetStateOnTransition=false>
-                <TransitionableRouteView DefaultLayout=typeof(TransitionLayout) />
-            </TransitionableRouteSecondary>
-        </LayoutView>
-    </Found>
-    <NotFound>
-        <PageTitle>Not found</PageTitle>
-        <LayoutView Layout="@typeof(MainLayout)">
-            <p role="alert">Sorry, there's nothing at this address.</p>
-        </LayoutView>
-    </NotFound>
-</Router>
+﻿<ThemeProvider Theme=_theme>
+    <Router AppAssembly="@typeof(App).Assembly">
+        <Found Context="routeData">
+            <LayoutView Layout=typeof(MainLayout)>
+                <TransitionableRoutePrimary RouteData=routeData ForgetStateOnTransition=false>
+                    <TransitionableRouteView DefaultLayout=typeof(TransitionLayout) />
+                </TransitionableRoutePrimary>
+                <TransitionableRouteSecondary RouteData=routeData ForgetStateOnTransition=false>
+                    <TransitionableRouteView DefaultLayout=typeof(TransitionLayout) />
+                </TransitionableRouteSecondary>
+            </LayoutView>
+        </Found>
+        <NotFound>
+            <PageTitle>Not found</PageTitle>
+            <LayoutView Layout="@typeof(MainLayout)">
+                <p role="alert">Sorry, there's nothing at this address.</p>
+            </LayoutView>
+        </NotFound>
+    </Router>
+</ThemeProvider>
