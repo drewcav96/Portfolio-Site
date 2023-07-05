@@ -1,95 +1,125 @@
 ﻿@page "/projects/invoice-indexing"
 
-<Hero>
-    <Title>
-        Invoice Indexing Software
-    </Title>
-    <Subtitle>
-        Document manager integrated with business software systems and enhanced auditing intranet tool.
-    </Subtitle>
-</Hero>
+<!-- Heading -->
+<Heading Size=HeadingSize.Is2 Margin=Margin.Is2.OnY TextColor=TextColor.Light>
+    Invoice Indexing Software
+</Heading>
+<Lead Margin=Margin.Is3.OnY>
+    Document manager integrated with business software systems and enhanced auditing intranet tool.
+</Lead>
 
 <!-- Summary -->
-<Section>
-    <Title>
-        Project Summary
-    </Title>
-    <Content>
-        <p class="my-4">
-            <span class="has-text-weight-semibold">
-                Operational Goals:
-            </span>
-            <ul>
-                <li>
+<Row>
+    <Column Margin=Margin.Is3.OnY>
+        <Paragraph Margin=Margin.Is2.OnY>
+            This project aimed to unify critical business applications that separately handled purchasing and processing of payments.
+            Hard copy invoices are scanned and uploaded from remote branches with its datapoints indexed on a SQL database.
+            Additionally, this solution eliminated the need for printing and filing of invoices at the corporate office.
+            Background services run continuously to audit the system, enforce data integrity, and reference links between external business applications.
+        </Paragraph>
+    </Column>
+</Row>
+
+<!-- Breakdown -->
+<Div Class="tile is-ancestor">
+    <Div Class="tile is-parent is-vertical">
+        <!-- Operational Goals -->
+        <Div Class="tile is-child notification is-danger">
+            <Heading Size=HeadingSize.Is4>
+                <Icon Name=Blazorise.Icons.FontAwesome.FontAwesomeIcons.Bullseye />
+                Operational Goals
+            </Heading>
+            <UnorderedList>
+                <UnorderedListItem>
                     Enable remote branches to quickly upload scanned invoice copies to corporate for billing.
-                </li>
-                <li>
+                </UnorderedListItem>
+                <UnorderedListItem>
                     Create a link between FMIS and ERP systems for an invoice represented by a purchase order and voucher, respectively.
-                </li>
-                <li>
+                </UnorderedListItem>
+                <UnorderedListItem>
                     Provide branch managers with a resource to upload and review expense reports.
-                </li>
-                <li>
+                </UnorderedListItem>
+                <UnorderedListItem>
                     Establish an indexed resource to assist with month-end and quarterly review processes.
-                </li>
-                <li>
+                </UnorderedListItem>
+                <UnorderedListItem>
                     Assist both internal and external audits with highly customizable search features and routine background congruency processes.
-                </li>
-                <li>
+                </UnorderedListItem>
+                <UnorderedListItem>
                     Serve as a centralized resource of vendors available to each branch.
-                </li>
-            </ul>
-        </p>
-
-        <p class="my-4">
-            <span class="has-text-weight-semibold">
-                Accounting Goals:
-            </span>
-            <ul>
-                <li>
+                </UnorderedListItem>
+            </UnorderedList>
+        </Div>
+        <!-- Accounting Goals -->
+        <Div Class="tile is-child notification is-link">
+            <Heading Size=HeadingSize.Is4>
+                <Icon Name=Blazorise.Icons.FontAwesome.FontAwesomeIcons.DollarSign />
+                Accounting Goals
+            </Heading>
+            <UnorderedList>
+                <UnorderedListItem>
                     Eliminate daily manual data entry of invoices into ERP software.
-                </li>
-                <li>
+                </UnorderedListItem>
+                <UnorderedListItem>
                     Reduce paper and ink footprint with an indexed repository of soft-copies.
-                </li>
-                <li>
+                </UnorderedListItem>
+                <UnorderedListItem>
                     Supply reports and tools to Accounts Payable not readily available in ERP software tailored to unique business requirements.
-                </li>
-                <li>
+                </UnorderedListItem>
+                <UnorderedListItem>
                     Keep a record of all edits and lifecycle changes of an invoice from initial upload to final payment.
-                </li>
-                <li>
+                </UnorderedListItem>
+                <UnorderedListItem>
                     Generate invoice, expense report, and vendor spreadsheet reports on-demand from supplied parameters.
-                </li>
-            </ul>
-        </p>
-
-        <p class="my-4">
-            <span class="has-text-weight-semibold">
-                Technologies Used:
-            </span>
-            <ul>
-                <li>
+                </UnorderedListItem>
+            </UnorderedList>
+        </Div>
+    </Div>
+    <Div Class="tile is-parent">
+        <Div Class="tile is-child notification is-info">
+            <Heading Size=HeadingSize.Is4>
+                <Icon Name=Blazorise.Icons.FontAwesome.FontAwesomeIcons.Cogs />
+                Technologies
+            </Heading>
+            <UnorderedList>
+                <UnorderedListItem>
                     ASP.NET Core MVC 6.x
-                </li>
-                <li>
+                </UnorderedListItem>
+                <UnorderedListItem>
                     Active Directory Authentication
-                </li>
-                <li>
+                </UnorderedListItem>
+                <UnorderedListItem>
                     Policy &amp; Resource-based Authorization of Areas for branch isolation
-                </li>
-                <li>
+                </UnorderedListItem>
+                <UnorderedListItem>
                     SQL Server with Entity Framework data layer
-                </li>
-                <li>
+                </UnorderedListItem>
+                <UnorderedListItem>
                     Bootstrap UI/UX design
-                </li>
-                <li>
+                </UnorderedListItem>
+                <UnorderedListItem>
                     3PLs: ClosedXML, CsvHelper, PdfPig, EFCore Triggered, LinqKit, Serilog
-                </li>
-            </ul>
-        </p>
-    </Content>
-</Section>
+                </UnorderedListItem>
+            </UnorderedList>
+        </Div>
+    </Div>
+</Div>
 
-<!-- Carousel -->
+<!-- Showcase -->
+<Carousel>
+    <CarouselSlide Name="invc-upload">
+        <Image Source="img/invc/field/invc-upload.png" Display=Display.Block Width=Width.Is100 />
+    </CarouselSlide>
+    <CarouselSlide Name="invc-detail">
+        <Image Source="img/invc/field/invc-detail.png" Display=Display.Block Width=Width.Is100 />
+    </CarouselSlide>
+    <CarouselSlide Name="invc-list">
+        <Image Source="img/invc/field/invc-list.png" Display=Display.Block Width=Width.Is100 />
+    </CarouselSlide>
+    <CarouselSlide Name="invc-polist">
+        <Image Source="img/invc/field/invc-polist.png" Display=Display.Block Width=Width.Is100 />
+    </CarouselSlide>
+    <CarouselSlide Name="vend-list">
+        <Image Source="img/invc/field/vend-list.png" Display=Display.Block Width=Width.Is100 />
+    </CarouselSlide>
+</Carousel>
