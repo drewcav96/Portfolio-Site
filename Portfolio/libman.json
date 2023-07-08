@@ -3,16 +3,16 @@
   "defaultProvider": "cdnjs",
   "libraries": [
     {
-      "library": "bulma@0.9.1",
-      "destination": "wwwroot/lib/bulma/"
-    },
-    {
       "library": "animate.css@4.1.1",
       "destination": "wwwroot/lib/animate.css/"
     },
     {
       "library": "font-awesome@5.15.4",
       "destination": "wwwroot/lib/font-awesome/"
+    },
+    {
+      "library": "bootstrap@5.2.3",
+      "destination": "wwwroot/lib/bootstrap/"
     }
   ]
 }

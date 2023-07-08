@@ -1,11 +1,11 @@
-﻿<ThemeProvider Theme=_theme>
+﻿<ThemeProvider Theme=ThemeProvider.SiteTheme>
     <Router AppAssembly="@typeof(App).Assembly">
         <Found Context="routeData">
             <LayoutView Layout=typeof(MainLayout)>
-                <TransitionableRoutePrimary RouteData=routeData ForgetStateOnTransition=false>
+                <TransitionableRoutePrimary RouteData=routeData ForgetStateOnTransition=true>
                     <TransitionableRouteView DefaultLayout=typeof(TransitionLayout) />
                 </TransitionableRoutePrimary>
-                <TransitionableRouteSecondary RouteData=routeData ForgetStateOnTransition=false>
+                <TransitionableRouteSecondary RouteData=routeData ForgetStateOnTransition=true>
                     <TransitionableRouteView DefaultLayout=typeof(TransitionLayout) />
                 </TransitionableRouteSecondary>
             </LayoutView>

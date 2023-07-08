@@ -10,27 +10,31 @@
     <base href="/" />
 
     <!-- Library Stylesheets -->
-    <link rel="stylesheet" href="lib/bulma/css/bulma.min.css" />
+    <!--    <link rel="stylesheet" href="lib/bulma/css/bulma.min.css" /> -->
+    <link rel="stylesheet" href="lib/bootstrap/css/bootstrap.min.css" />
     <link rel="stylesheet" href="lib/font-awesome/css/all.min.css" />
     <link rel="stylesheet" href="lib/animate.css/animate.min.css" />
-    
+
     <!-- Package Stylesheets -->
-    <link rel="stylesheet" href="_content/Blazorise/blazorise.css" />
-    <link rel="stylesheet" href="_content/Blazorise.Bulma/blazorise.bulma.css" />
+    <link rel="stylesheet" href="_content/Blazorise/blazorise.css?v=1.2.4.0" />
+    <link rel="stylesheet" href="_content/Blazorise.Bulma/blazorise.bulma.css?v=1.2.4.0" />
 
     <!-- Static Stylesheets -->
     <link rel="stylesheet" href="Portfolio.styles.css" />
     <link rel="stylesheet" href="site.css" />
 </head>
 
-<body class="has-navbar-fixed-top">
+<body class="">
     <main id="app">
-        <div class="mx-6 my-auto">
-            <progress class="progress is-large" max="100">
-                Loading...
-            </progress>
+        <div class="position-relative vh-100 mx-5">
+            <div class="progress position-absolute top-50 w-100">
+                <div class="progress-bar" style="width: var(--blazor-load-percentage, 0%);"></div>
+            </div>
         </div>
     </main>
+
+    <!-- Library Scripts -->
+    <script src="lib/bootstrap/js/bootstrap.bundle.min.js"></script>
 
     <!-- Framework Scripts -->
     <script src="_framework/blazor.webassembly.js"></script>

@@ -2,16 +2,12 @@
 
 namespace Portfolio
 {
-    public partial class App
+    public static class ThemeProvider
     {
-        private readonly Theme _theme = new()
+        internal static readonly Theme SiteTheme = new()
         {
-            BackgroundOptions = new()
-            {
-                Body = "#000000"
-            },
             BarOptions = new()
-            {                
+            {
                 DarkColors = new()
                 {
                     //BackgroundColor = "#191919",

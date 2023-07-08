@@ -1,5 +1,5 @@
 using Blazorise;
-using Blazorise.Bulma;
+using Blazorise.Bootstrap5;
 using Blazorise.Icons.FontAwesome;
 using BlazorTransitionableRoute;
 using Microsoft.AspNetCore.Components.Web;
@@ -17,7 +17,8 @@ builder.Services.AddScoped(sp => new HttpClient
 });
 builder.Services.AddScoped<IRouteTransitionInvoker, DefaultRouteTransitionInvoker>();
 builder.Services.AddBlazorise()
-    .AddBulmaProviders()
+    //.AddBulmaProviders()
+    .AddBootstrap5Providers()
     .AddFontAwesomeIcons();
 
 await builder.Build()

@@ -2,6 +2,11 @@
 {
     public partial class TransitionLayout
     {
+        protected string CssClass
+        {
+            get =>
+                $"transition {GetTransitioningCssClass()} {GetTransitionedCssClass()}";
+        }
         private string GetTransitioningCssClass()
         {
             return Transition.FirstRender

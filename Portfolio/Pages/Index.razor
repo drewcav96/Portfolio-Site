@@ -37,16 +37,16 @@
 
 
 <!-- Skills -->
-<Div Class="tile is-ancestor">
-    <Div Class="tile is-vertical">
-        <Div Class="tile">
-            <Div Class="tile is-parent is-vertical">
-                <!-- Hard Skills -->
-                <Div Class="tile is-child notification is-primary">
-                    <Heading Size=HeadingSize.Is4>
-                        <Icon Name=Blazorise.Icons.FontAwesome.FontAwesomeIcons.Toolbox />
-                        Hard Skills
-                    </Heading>
+<Row RowColumns=RowColumns.Are2.OnTablet>
+    <Div>
+        <!-- Hard Skills -->
+        <Card Background=Background.Primary Margin=Margin.Is3.OnY>
+            <CardBody>
+                <CardTitle Size=4>
+                    <Icon Name=Blazorise.Icons.FontAwesome.FontAwesomeIcons.Toolbox />
+                    Hard Skills
+                </CardTitle>
+                <CardText>
                     <UnorderedList>
                         <UnorderedListItem>
                             Software Design &amp; Testing
@@ -70,14 +70,18 @@
                             Reporting &amp; Data Analytics
                         </UnorderedListItem>
                     </UnorderedList>
-                </Div>
+                </CardText>
+            </CardBody>
+        </Card>
 
-                <!-- Soft Skills -->
-                <Div Class="tile is-child notification is-info">
-                    <Heading Size=HeadingSize.Is4>
-                        <Icon Name=Blazorise.Icons.FontAwesome.FontAwesomeIcons.Handshake />
-                        Soft Skills
-                    </Heading>
+        <!-- Soft Skills -->
+        <Card Background=Background.Info Margin=Margin.Is3.OnY>
+            <CardBody>
+                <CardTitle Size=4>
+                    <Icon Name=Blazorise.Icons.FontAwesome.FontAwesomeIcons.Handshake />
+                    Soft Skills
+                </CardTitle>
+                <CardText>
                     <UnorderedList>
                         <UnorderedListItem>
                             Attention to Detail
@@ -92,15 +96,20 @@
                             Desire to Understand Your Business
                         </UnorderedListItem>
                     </UnorderedList>
-                </Div>
-            </Div>
-            <Div Class="tile is-parent is-vertical">
-                <!-- Back End Skills -->
-                <Div Class="tile is-child notification is-warning">
-                    <Heading Size=HeadingSize.Is4>
-                        <Icon Name=Blazorise.Icons.FontAwesome.FontAwesomeIcons.Code />
-                        Back-End Skills
-                    </Heading>
+                </CardText>
+            </CardBody>
+        </Card>
+    </Div>
+
+    <Div>
+        <!-- Back End Skills -->
+        <Card Background=Background.Warning Margin=Margin.Is3.OnY>
+            <CardBody>
+                <CardTitle Size=4>
+                    <Icon Name=Blazorise.Icons.FontAwesome.FontAwesomeIcons.Code />
+                    Back-End Skills
+                </CardTitle>
+                <CardText>
                     <UnorderedList>
                         <UnorderedListItem>
                             Proficiency in: C#, Java, T-SQL, MySQL
@@ -118,14 +127,18 @@
                             Entity Framework, LINQ
                         </UnorderedListItem>
                     </UnorderedList>
-                </Div>
+                </CardText>
+            </CardBody>
+        </Card>
 
-                <!-- Front-End Skills -->
-                <Div Class="tile is-child notification is-danger">
-                    <Heading Size=HeadingSize.Is4>
-                        <Icon Name=Blazorise.Icons.FontAwesome.FontAwesomeIcons.PencilRuler />
-                        Front-End Skills
-                    </Heading>
+        <!-- Front-End Skills -->
+        <Card Background=Background.Danger Margin=Margin.Is3.OnY>
+            <CardBody>
+                <CardTitle Size=4>
+                    <Icon Name=Blazorise.Icons.FontAwesome.FontAwesomeIcons.PencilRuler />
+                    Front-End Skills
+                </CardTitle>
+                <CardText>
                     <UnorderedList>
                         <UnorderedListItem>
                             Proficiency in: HTML5, CSS, JavaScript
@@ -143,8 +156,8 @@
                             Responsive and Single-Page Web Apps
                         </UnorderedListItem>
                     </UnorderedList>
-                </Div>
-            </Div>
-        </Div>
+                </CardText>
+            </CardBody>
+        </Card>
     </Div>
-</Div>
+</Row>
