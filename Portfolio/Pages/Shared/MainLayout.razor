@@ -1,10 +1,10 @@
 ﻿@inherits LayoutComponentBase
 
 <Layout>
-    <LayoutHeader Fixed>
+    <LayoutHeader Fixed Style="z-index: 100;"> 
         <TopMenu />
     </LayoutHeader>
-    <LayoutContent Padding=Padding.Is5.OnY>
+    <LayoutContent Padding=Padding.Is5.OnY Margin=Margin.Is2.OnX.FromEnd.OnMobile.Is0.OnTablet>
         <Container Breakpoint=Breakpoint.Tablet Position=Position.Relative>
             @Body
         </Container>
