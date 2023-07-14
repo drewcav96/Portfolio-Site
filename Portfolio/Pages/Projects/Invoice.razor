@@ -9,16 +9,12 @@
 </Lead>
 
 <!-- Summary -->
-<Row>
-    <Column Margin=Margin.Is3.OnY>
-        <Paragraph Margin=Margin.Is2.OnY>
-            This project aimed to unify critical business applications that separately handled purchasing and processing of payments.
-            Hard copy invoices are scanned and uploaded from remote branches with its datapoints indexed on a SQL database.
-            Additionally, this solution eliminated the need for printing and filing of invoices at the corporate office.
-            Background services run continuously to audit the system, enforce data integrity, and reference links between external business applications.
-        </Paragraph>
-    </Column>
-</Row>
+<Paragraph Margin=Margin.Is2.OnY>
+    This project aimed to unify critical business applications that separately handled purchasing and processing of payments.
+    Hard copy invoices are scanned and uploaded from remote branches with its datapoints indexed on a SQL database.
+    Additionally, this solution eliminated the need for printing and filing of invoices at the corporate office.
+    Background services run continuously to audit the system, enforce data integrity, and reference links between external business applications.
+</Paragraph>
 
 <!-- Breakdown -->
 <Row>
@@ -124,7 +120,7 @@
 
 <!-- Showcase -->
 <Div Margin=Margin.Is3.OnY>
-    <Tabs @ref=_tabsShowcase SelectedTab="field" TabPosition=TabPosition.Top Background=Background.Light Border=Border.RoundedTop Padding=Padding.Is2.OnY.FromTop.OnTablet.Is3.OnX.OnTablet>
+    <Tabs SelectedTab="field" TabPosition=TabPosition.Top Background=Background.Light Border=Border.RoundedTop Padding=Padding.Is2.OnY.FromTop.OnTablet.Is3.OnX.OnTablet>
         <Items>
             <Tab Name="field" Class="tab-item">
                 <Icon Name=Blazorise.Icons.FontAwesome.FontAwesomeIcons.Users />
@@ -147,162 +143,169 @@
         <Content>
             <!-- Field Users -->
             <TabPanel Name="field">
-                @_cslField
+                @CarouselField
             </TabPanel>
 
             <!-- Accounts Payable -->
             <TabPanel Name="ap">
-                @_cslAP
+                @CarouselAP
             </TabPanel>
 
             <!-- Auditing -->
             <TabPanel Name="audit">
-                @_cslAudit
+                @CarouselAudit
             </TabPanel>
 
             <!-- System Config -->
             <TabPanel Name="sys">
-                @_cslSys
+                @CarouselSys
             </TabPanel>
         </Content>
     </Tabs>
 </Div>
 
 @code {
-    private RenderFragment _cslField => __builder =>
+    private static readonly RenderFragment CarouselField = __builder =>
     {
         <Carousel Autoplay=false>
-            <CarouselSlide Name="invc-upload" @onclick=ShowLightboxOnClick>
-                <Div Display=Display.Block Position=Position.Relative>
+            <CarouselSlide Name="invc-upload">
+                <Anchor To="img/invc/field/invc-upload.png" Target=Target.Blank>
                     <Image Source="img/invc/field/invc-upload.png" Display=Display.Block Width=Width.Is100 />
-                    <Small Position=Position.Absolute.Bottom.Is0.Start.Is50.Translate.MiddleX Background=Background.Dark Padding=Padding.Is2 Border=Border.RoundedTop>
-                        User enters pertinent invoice data into upload form.
-                        Validation is performed against the database context in real time.
-                    </Small>
-                </Div>
+                </Anchor>
+                <Small Position=Position.Absolute.Bottom.Is0.Start.Is50.Translate.MiddleX Background=Background.Dark Padding=Padding.Is2 Border=Border.RoundedTop>
+                    User enters pertinent invoice data into upload form.
+                    Validation is performed against the database context in real time.
+                </Small>
             </CarouselSlide>
-            <CarouselSlide Name="invc-detail" @onclick=ShowLightboxOnClick>
-                <Div Display=Display.Block Position=Position.Relative>
+
+            <CarouselSlide Name="invc-detail">
+                <Anchor To="img/invc/field/invc-detail.png" Target=Target.Blank>
                     <Image Source="img/invc/field/invc-detail.png" Display=Display.Block Width=Width.Is100 />
-                    <Small Position=Position.Absolute.Bottom.Is0.Start.Is50.Translate.MiddleX Background=Background.Dark Padding=Padding.Is2 Border=Border.RoundedTop>
-                        Detail display of an upload with document embed.
-                        One or more documents may be attached, and system link details are displayed in the
-                        <Strong>
-                            Purchase Order
-                        </Strong>
-                        and
-                        <Strong>
-                            Voucher
-                        </Strong>
-                        tabs.
-                    </Small>
-                </Div>
+                </Anchor>
+                <Small Position=Position.Absolute.Bottom.Is0.Start.Is50.Translate.MiddleX Background=Background.Dark Padding=Padding.Is2 Border=Border.RoundedTop>
+                    Detail display of an upload with document embed.
+                    One or more documents may be attached, and system link details are displayed in the
+                    <Strong>
+                        Purchase Order
+                    </Strong>
+                    and
+                    <Strong>
+                        Voucher
+                    </Strong>
+                    tabs.
+                </Small>
             </CarouselSlide>
-            <CarouselSlide Name="invc-list" @onclick=ShowLightboxOnClick>
-                <Div Display=Display.Block Position=Position.Relative>
+
+            <CarouselSlide Name="invc-list">
+                <Anchor To="img/invc/field/invc-list.png" Target=Target.Blank>
                     <Image Source="img/invc/field/invc-list.png" Display=Display.Block Width=Width.Is100 />
-                    <Small Position=Position.Absolute.Bottom.Is0.Start.Is50.Translate.MiddleX Background=Background.Dark Padding=Padding.Is2 Border=Border.RoundedTop>
-                        Invoice list screen which shows all uploads for a given location.
-                        Results can be filtered, ordered, and paginated at the database layer before rendering for optimal performance.
-                    </Small>
-                </Div>
+                </Anchor>
+                <Small Position=Position.Absolute.Bottom.Is0.Start.Is50.Translate.MiddleX Background=Background.Dark Padding=Padding.Is2 Border=Border.RoundedTop>
+                    Invoice list screen which shows all uploads for a given location.
+                    Results can be filtered, ordered, and paginated at the database layer before rendering for optimal performance.
+                </Small>
             </CarouselSlide>
-            <CarouselSlide Name="invc-polist" @onclick=ShowLightboxOnClick>
-                <Div Display=Display.Block Position=Position.Relative>
+
+            <CarouselSlide Name="invc-polist">
+                <Anchor To="img/invc/field/invc-polist.png" Target=Target.Blank>
                     <Image Source="img/invc/field/invc-polist.png" Display=Display.Block Width=Width.Is100 />
-                    <Small Position=Position.Absolute.Bottom.Is0.Start.Is50.Translate.MiddleX Background=Background.Dark Padding=Padding.Is2 Border=Border.RoundedTop>
-                        Purchase Order list which queries live results from a production business application.
-                        Typically the starting point for field user uploading, as the invoice must be linked to a Purchase Order out of the FMIS software.
-                    </Small>
-                </Div>
+                </Anchor>
+                <Small Position=Position.Absolute.Bottom.Is0.Start.Is50.Translate.MiddleX Background=Background.Dark Padding=Padding.Is2 Border=Border.RoundedTop>
+                    Purchase Order list which queries live results from a production business application.
+                    Typically the starting point for field user uploading, as the invoice must be linked to a Purchase Order out of the FMIS software.
+                </Small>
             </CarouselSlide>
-            <CarouselSlide Name="vend-list" @onclick=ShowLightboxOnClick>
-                <Div Display=Display.Block Position=Position.Relative>
+
+            <CarouselSlide Name="vend-list">
+                <Anchor To="img/invc/field/vend-list.png" Target=Target.Blank>
                     <Image Source="img/invc/field/vend-list.png" Display=Display.Block Width=Width.Is100 />
-                    <Small Position=Position.Absolute.Bottom.Is0.Start.Is50.Translate.MiddleX Background=Background.Dark Padding=Padding.Is2 Border=Border.RoundedTop>
-                        Vendor list for a given location.
-                        Not all Vendors are made available for use at every location, so one role of this application is to provide granular control over which Vendors may be used for uploads at each location.
-                    </Small>
-                </Div>
+                </Anchor>
+                <Small Position=Position.Absolute.Bottom.Is0.Start.Is50.Translate.MiddleX Background=Background.Dark Padding=Padding.Is2 Border=Border.RoundedTop>
+                    Vendor list for a given location.
+                    Not all Vendors are made available for use at every location, so one role of this application is to provide granular control over which Vendors may be used for uploads at each location.
+                </Small>
             </CarouselSlide>
         </Carousel>
     };
 
-    private RenderFragment _cslAP => __builder =>
+    private static readonly RenderFragment CarouselAP = __builder =>
     {
-
         <Carousel Autoplay=false>
-            <CarouselSlide Name="invc-print" @onclick=ShowLightboxOnClick>
-                <Div Display=Display.Block Position=Position.Relative>
+            <CarouselSlide Name="invc-print">
+                <Anchor To="img/invc/ap/invc-print.png" Target=Target.Blank>
                     <Image Source="img/invc/ap/invc-print.png" Display=Display.Block Width=Width.Is100 />
-                    <Small Position=Position.Absolute.Bottom.Is0.Start.Is50.Translate.MiddleX Background=Background.Dark Padding=Padding.Is2 Border=Border.RoundedTop>
-                        Bulk print preview pane that allows payables to send one job of several documents to the printer if necessary for processing.
-                    </Small>
-                </Div>
+                </Anchor>
+                <Small Position=Position.Absolute.Bottom.Is0.Start.Is50.Translate.MiddleX Background=Background.Dark Padding=Padding.Is2 Border=Border.RoundedTop>
+                    Bulk print preview pane that allows payables to send one job of several documents to the printer if necessary for processing.
+                </Small>
             </CarouselSlide>
-            <CarouselSlide Name="vouch-export" @onclick=ShowLightboxOnClick>
-                <Div Display=Display.Block Position=Position.Relative>
+
+            <CarouselSlide Name="vouch-export">
+                <Anchor To="img/invc/ap/vouch-export.png" Target=Target.Blank>
                     <Image Source="img/invc/ap/vouch-export.png" Display=Display.Block Width=Width.Is100 />
-                    <Small Position=Position.Absolute.Bottom.Is0.Start.Is50.Translate.MiddleX Background=Background.Dark Padding=Padding.Is2 Border=Border.RoundedTop>
-                        Automatic export of untethered invoices to the ERP system for bulk import.
-                        Ensures data entry validity and consistency by eliminating risk of typos.
-                    </Small>
-                </Div>
+                </Anchor>
+                <Small Position=Position.Absolute.Bottom.Is0.Start.Is50.Translate.MiddleX Background=Background.Dark Padding=Padding.Is2 Border=Border.RoundedTop>
+                    Automatic export of untethered invoices to the ERP system for bulk import.
+                    Ensures data entry validity and consistency by eliminating risk of typos.
+                </Small>
             </CarouselSlide>
-            <CarouselSlide Name="vouch-link" @onclick=ShowLightboxOnClick>
-                <Div Display=Display.Block Position=Position.Relative>
+
+            <CarouselSlide Name="vouch-link">
+                <Anchor To="img/invc/ap/vouch-link.png" Target=Target.Blank>
                     <Image Source="img/invc/ap/vouch-link.png" Display=Display.Block Width=Width.Is100 />
-                    <Small Position=Position.Absolute.Bottom.Is0.Start.Is50.Translate.MiddleX Background=Background.Dark Padding=Padding.Is2 Border=Border.RoundedTop>
-                        Background service occasionally checks ERP system for newly created vouchers.
-                        Vouchers that match invoice details establish a link between the systems, allowing the application to track its payment progress.
-                    </Small>
-                </Div>
+                </Anchor>
+                <Small Position=Position.Absolute.Bottom.Is0.Start.Is50.Translate.MiddleX Background=Background.Dark Padding=Padding.Is2 Border=Border.RoundedTop>
+                    Background service occasionally checks ERP system for newly created vouchers.
+                    Vouchers that match invoice details establish a link between the systems, allowing the application to track its payment progress.
+                </Small>
             </CarouselSlide>
         </Carousel>
     };
 
-    private RenderFragment _cslAudit => __builder =>
+    private static readonly RenderFragment CarouselAudit = __builder =>
     {
         <Carousel Autoplay=false>
-            <CarouselSlide Name="invc-search" @onclick=ShowLightboxOnClick>
-                <Div Display=Display.Block Position=Position.Relative>
+            <CarouselSlide Name="invc-search">
+                <Anchor To="img/invc/audit/invc-search.png" Target=Target.Blank>
                     <Image Source="img/invc/audit/invc-search.png" Display=Display.Block Width=Width.Is100 />
-                    <Small Position=Position.Absolute.Bottom.Is0.Start.Is50.Translate.MiddleX Background=Background.Dark Padding=Padding.Is2 Border=Border.RoundedTop>
-                        Comprehensive filtering capability allows directors and auditors to quickly find invoices matching any of the available data points.
-                    </Small>
-                </Div>
+                </Anchor>
+                <Small Position=Position.Absolute.Bottom.Is0.Start.Is50.Translate.MiddleX Background=Background.Dark Padding=Padding.Is2 Border=Border.RoundedTop>
+                    Comprehensive filtering capability allows directors and auditors to quickly find invoices matching any of the available data points.
+                </Small>
             </CarouselSlide>
-            <CarouselSlide Name="invc-report" @onclick=ShowLightboxOnClick>
-                <Div Display=Display.Block Position=Position.Relative>
+
+            <CarouselSlide Name="invc-report">
+                <Anchor To="img/invc/audit/invc-report.png" Target=Target.Blank>
                     <Image Source="img/invc/audit/invc-report.png" Display=Display.Block Width=Width.Is100 />
-                    <Small Position=Position.Absolute.Bottom.Is0.Start.Is50.Translate.MiddleX Background=Background.Dark Padding=Padding.Is2 Border=Border.RoundedTop>
-                        Report feature exports invoices matching the filter to Excel if necessary for external documentation.
-                    </Small>
-                </Div>
+                </Anchor>
+                <Small Position=Position.Absolute.Bottom.Is0.Start.Is50.Translate.MiddleX Background=Background.Dark Padding=Padding.Is2 Border=Border.RoundedTop>
+                    Report feature exports invoices matching the filter to Excel if necessary for external documentation.
+                </Small>
             </CarouselSlide>
         </Carousel>
     };
 
-    private RenderFragment _cslSys => __builder =>
+    private static readonly RenderFragment CarouselSys = __builder =>
     {
         <Carousel Autoplay=false>
-            <CarouselSlide Name="gp-list" @onclick=ShowLightboxOnClick>
-                <Div Display=Display.Block Position=Position.Relative>
+            <CarouselSlide Name="gp-list">
+                <Anchor To="img/invc/sys/gp-list.png" Target=Target.Blank>
                     <Image Source="img/invc/sys/gp-list.png" Display=Display.Block Width=Width.Is100 />
-                    <Small Position=Position.Absolute.Bottom.Is0.Start.Is50.Translate.MiddleX Background=Background.Dark Padding=Padding.Is2 Border=Border.RoundedTop>
-                        Authentication and Authorization are managed by Windows Active Directory.
-                        Group Policies are added and their roles are configured via the Group Policy Manager.
-                    </Small>
-                </Div>
+                </Anchor>
+                <Small Position=Position.Absolute.Bottom.Is0.Start.Is50.Translate.MiddleX Background=Background.Dark Padding=Padding.Is2 Border=Border.RoundedTop>
+                    Authentication and Authorization are managed by Windows Active Directory.
+                    Group Policies are added and their roles are configured via the Group Policy Manager.
+                </Small>
             </CarouselSlide>
-            <CarouselSlide Name="territory-opt" @onclick=ShowLightboxOnClick>
-                <Div Display=Display.Block Position=Position.Relative>
+
+            <CarouselSlide Name="territory-opt">
+                <Anchor To="img/invc/sys/territory-opt.png" Target=Target.Blank>
                     <Image Source="img/invc/sys/territory-opt.png" Display=Display.Block Width=Width.Is100 />
-                    <Small Position=Position.Absolute.Bottom.Is0.Start.Is50.Translate.MiddleX Background=Background.Dark Padding=Padding.Is2 Border=Border.RoundedTop>
-                        Each location is configured to only allow members of the specified local Group Policies to have certain rights within it.
-                        If a user does not belong to a Group Policy that has global or local access rights to that location, access is forbidden.
-                    </Small>
-                </Div>
+                </Anchor>
+                <Small Position=Position.Absolute.Bottom.Is0.Start.Is50.Translate.MiddleX Background=Background.Dark Padding=Padding.Is2 Border=Border.RoundedTop>
+                    Each location is configured to only allow members of the specified local Group Policies to have certain rights within it.
+                    If a user does not belong to a Group Policy that has global or local access rights to that location, access is forbidden.
+                </Small>
             </CarouselSlide>
         </Carousel>
     };
