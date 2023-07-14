@@ -1,69 +1,253 @@
 ﻿@page "/projects/approval-tracking"
 
-<Hero>
-    <Title>
-        Repair Approvals &amp; Tracking
-    </Title>
-    <Subtitle>
-        Client web portal for reviewing, approving, and tracking repairs.
-    </Subtitle>
-</Hero>
+<!-- Heading -->
+<Heading Size=HeadingSize.Is2 Margin=Margin.Is2.OnY TextColor=TextColor.Light>
+    Repair Approvals &amp; Tracking
+</Heading>
+<Lead Margin=Margin.Is3.OnY>
+    Customer web portal for reviewing, approving, and tracking asset downtime.
+</Lead>
 
 <!-- Summary -->
-<Section>
-    <Title>
-        Project Summary
-    </Title>
-    <Content>
-        <p class="my-4">
-            <span class="has-text-weight-semibold">
-                Operational Goals:
-            </span>
-            <ul>
-                <li>
-                    Provide customer with a portal to review and approve repair estimates exceeding contractual spending thresholds.
-                </li>
-                <li>
-                    Allow customer to see line-item details about labor, services, and parts are required for a repair.
-                </li>
-                <li>
-                    Enable email notifications to customer and branch manager when estimates are issued / approved and repair begins / finishes.
-                </li>
-                <li>
-                    Assign user approving responsibilities to specific units according to customer oversight policy.
-                </li>
-                <li>
-                    Track timestamps of status updates for clear and concise repair lifecycle reports.
-                </li>
-            </ul>
-        </p>
+<Paragraph Margin=Margin.Is2.OnY>
+    This project helped close the digital gap between our repair technicians and the customer.
+    Prior to this implementation, there were no receipts for the customer approving repair estimates, often later leading to disagreements about pricing.
+    With this web portal, the customer is able to receive notifications about repair estimates, approve pricing thresholds, and track the progress of a work order in real-time.
+</Paragraph>
 
-        <p class="my-4">
-            <span class="has-text-weight-semibold">
-                Technologies Used:
-            </span>
-            <ul>
-                <li>
-                    ASP.NET Core MVC 6.x
-                </li>
-                <li>
-                    Active Directory (employees) or Identity (customers) Authentication
-                </li>
-                <li>
-                    Policy &amp; Resource-based Authorization for Customer / Unit isolation
-                </li>
-                <li>
-                    SQL Server with Entity Framework data layer
-                </li>
-                <li>
-                    Bootstrap UI/UX design
-                </li>
-                <li>
-                    3PLs: LinqKit, MailKit, RtfPipe, Serilog
-                </li>
-            </ul>
-        </p>
-    </Content>
-</Section>
+<!-- Breakdown -->
+<Row>
+    <Column ColumnSize=ColumnSize.IsHalf.OnTablet>
+        <!-- Operational Goals -->
+        <Card Background=Background.Primary Margin=Margin.Is3.OnY>
+            <CardBody>
+                <CardTitle Size=4>
+                    <Icon Name=Blazorise.Icons.FontAwesome.FontAwesomeIcons.Bullseye />
+                    Operational Goals
+                </CardTitle>
+                <CardText>
+                    <UnorderedList>
+                        <UnorderedListItem>
+                            Provide customer with a portal to review and approve repair estimates exceeding contractual spending thresholds.
+                        </UnorderedListItem>
+                        <UnorderedListItem>
+                            Assign user approving responsibilities to specific units according to customer oversight policy.
+                        </UnorderedListItem>
+                        <UnorderedListItem>
+                            Track timestamps of every repair lifecycle event for full transparency and concrete bookkeeping.
+                        </UnorderedListItem>
+                        <UnorderedListItem>
+                            Eliminate liability of miscommunication between branches and their customers.
+                        </UnorderedListItem>
+                        <UnorderedListItem>
+                            Extend in-house FMIS system reporting capabilities to the customer.
+                        </UnorderedListItem>
+                    </UnorderedList>
+                </CardText>
+            </CardBody>
+        </Card>
+    </Column>
 
-<!-- Carousel -->
+    <Column ColumnSize=ColumnSize.IsHalf.OnTablet>
+        <!-- Customer Goals -->
+        <Card Background=Background.Success Margin=Margin.Is3.OnY>
+            <CardBody>
+                <CardTitle Size=4>
+                    <Icon Name=Blazorise.Icons.FontAwesome.FontAwesomeIcons.Bullhorn />
+                    Customer Benefits
+                </CardTitle>
+                <CardText>
+                    <UnorderedList>
+                        <UnorderedListItem>
+                            Provide a portal to customer&rsquo;s asset managers to approve and review work orders.
+                        </UnorderedListItem>
+                        <UnorderedListItem>
+                            Delegate access to asset managers to only make decisions on units at regions they are responsible for.
+                        </UnorderedListItem>
+                        <UnorderedListItem>
+                            Allow customer to see line-item details about labor, services, and parts are required for a repair.
+                        </UnorderedListItem>
+                        <UnorderedListItem>
+                            Enable email notifications of downtime updates to asset managers.
+                        </UnorderedListItem>
+                    </UnorderedList>
+                </CardText>
+            </CardBody>
+        </Card>
+    </Column>
+
+    <Column ColumnSize=ColumnSize.IsFull>
+        <!-- Technologies -->
+        <Card Background=Background.Secondary Margin=Margin.Is3.OnY>
+            <CardBody>
+                <CardTitle Size=4>
+                    <Icon Name=Blazorise.Icons.FontAwesome.FontAwesomeIcons.Cogs />
+                    Technologies
+                </CardTitle>
+                <CardText>
+                    <UnorderedList>
+                        <UnorderedListItem>
+                            ASP.NET Core MVC 6.x
+                        </UnorderedListItem>
+                        <UnorderedListItem>
+                            Active Directory (employees) or Identity (customers) Authentication
+                        </UnorderedListItem>
+                        <UnorderedListItem>
+                            Policy &amp; Resource-based Authorization for Customer / Unit isolation
+                        </UnorderedListItem>
+                        <UnorderedListItem>
+                            SQL Server with Entity Framework data layer
+                        </UnorderedListItem>
+                        <UnorderedListItem>
+                            Bootstrap UI/UX design
+                        </UnorderedListItem>
+                        <UnorderedListItem>
+                            3PLs: LinqKit, MailKit, RtfPipe, Serilog
+                        </UnorderedListItem>
+                    </UnorderedList>
+                </CardText>
+            </CardBody>
+        </Card>
+    </Column>
+</Row>
+
+<!-- Showcase -->
+<Div Margin=Margin.Is3.OnY>
+    <Tabs SelectedTab="flow" TabPosition=TabPosition.Top Background=Background.Light Border=Border.RoundedTop Padding=Padding.Is2.OnY.FromTop.OnTablet.Is3.OnX.OnTablet>
+        <Items>
+            <Tab Name="flow" Class="tab-item">
+                <Icon Name=Blazorise.Icons.FontAwesome.FontAwesomeIcons.ProjectDiagram />
+                Workflow
+            </Tab>
+            <Tab Name="sys" Class="tab-item">
+                <Icon Name=Blazorise.Icons.FontAwesome.FontAwesomeIcons.Lock />
+                System Config
+            </Tab>
+        </Items>
+
+        <Content>
+            <!-- Workflow -->
+            <TabPanel Name="flow">
+                @CarouselFlow
+            </TabPanel>
+
+            <TabPanel Name="sys">
+                @CarouselSys
+            </TabPanel>
+        </Content>
+    </Tabs>
+</Div>
+
+@code {
+    private static readonly RenderFragment CarouselFlow = __builder =>
+    {
+        <Carousel Autoplay=false>
+            <CarouselSlide Name="tracker-add">
+                <Anchor To="img/apptrk/flow/tracker-add.png" Target=Target.Blank>
+                    <Image Source="img/apptrk/flow/tracker-add.png" Display=Display.Block Width=Width.Is100 />
+                </Anchor>
+                <Small Position=Position.Absolute.Bottom.Is0.Start.Is50.Translate.MiddleX Background=Background.Dark Padding=Padding.Is2 Border=Border.RoundedTop>
+                    Site field admin or manager creates a new Tracker from a work order estimate number within the FMIS.
+                </Small>
+            </CarouselSlide>
+
+            <CarouselSlide Name="approve-email">
+                <Anchor To="img/apptrk/flow/approve-email.png" Target=Target.Blank>
+                    <Image Source="img/apptrk/flow/approve-email.png" Display=Display.Block Width=Width.Is100 />
+                </Anchor>
+                <Small Position=Position.Absolute.Bottom.Is0.Start.Is50.Translate.MiddleX Background=Background.Dark Padding=Padding.Is2 Border=Border.RoundedTop>
+                    The assigned asset manager receives an email notifying them that there is a work order estimate needing approval.
+                </Small>
+            </CarouselSlide>
+
+            <CarouselSlide Name="tracker-approve">
+                <Anchor To="img/apptrk/flow/tracker-approve.png" Target=Target.Blank>
+                    <Image Source="img/apptrk/flow/tracker-approve.png" Display=Display.Block Width=Width.Is100 />
+                </Anchor>
+                <Small Position=Position.Absolute.Bottom.Is0.Start.Is50.Translate.MiddleX Background=Background.Dark Padding=Padding.Is2 Border=Border.RoundedTop>
+                    Asset manager is directed to approve the work order estimate at or above the target amount.
+                </Small>
+            </CarouselSlide>
+
+            <CarouselSlide Name="tracker-detail-1">
+                <Anchor To="img/apptrk/flow/tracker-detail-1.png" Target=Target.Blank>
+                    <Image Source="img/apptrk/flow/tracker-detail-1.png" Display=Display.Block Width=Width.Is100 />
+                </Anchor>
+                <Small Position=Position.Absolute.Bottom.Is0.Start.Is50.Translate.MiddleX Background=Background.Dark Padding=Padding.Is2 Border=Border.RoundedTop>
+                    The Tracker detail screen queries the FMIS system in real-time to detail progress of the work order.
+                </Small>
+            </CarouselSlide>
+
+            <CarouselSlide Name="tracker-detail-2">
+                <Anchor To="img/apptrk/flow/tracker-detail-2.png" Target=Target.Blank>
+                    <Image Source="img/apptrk/flow/tracker-detail-2.png" Display=Display.Block Width=Width.Is100 />
+                </Anchor>
+                <Small Position=Position.Absolute.Bottom.Is0.Start.Is50.Translate.MiddleX Background=Background.Dark Padding=Padding.Is2 Border=Border.RoundedTop>
+                    Continuation of the Tracker detail screen, focusing on individual line items of the work order.
+                </Small>
+            </CarouselSlide>
+
+            <CarouselSlide Name="tracker-list">
+                <Anchor To="img/apptrk/flow/tracker-list.png" Target=Target.Blank>
+                    <Image Source="img/apptrk/flow/tracker-list.png" Display=Display.Block Width=Width.Is100 />
+                </Anchor>
+                <Small Position=Position.Absolute.Bottom.Is0.Start.Is50.Translate.MiddleX Background=Background.Dark Padding=Padding.Is2 Border=Border.RoundedTop>
+                    The Tracker list from the perspective of an asset manager.
+                    Resource-based authorization performed at the database layer filters work order Trackers only for units to which they are assigned.
+                </Small>
+            </CarouselSlide>
+
+            <CarouselSlide Name="unit-list">
+                <Anchor To="img/apptrk/flow/unit-list.png" Target=Target.Blank>
+                    <Image Source="img/apptrk/flow/unit-list.png" Display=Display.Block Width=Width.Is100 />
+                </Anchor>
+                <Small Position=Position.Absolute.Bottom.Is0.Start.Is50.Translate.MiddleX Background=Background.Dark Padding=Padding.Is2 Border=Border.RoundedTop>
+                    Asset list summarizes all units that this user is assigned to approve work orders for.
+                </Small>
+            </CarouselSlide>
+
+            <CarouselSlide Name="unit-detail">
+                <Anchor To="img/apptrk/flow/unit-detail.png" Target=Target.Blank>
+                    <Image Source="img/apptrk/flow/unit-detail.png" Display=Display.Block Width=Width.Is100 />
+                </Anchor>
+                <Small Position=Position.Absolute.Bottom.Is0.Start.Is50.Translate.MiddleX Background=Background.Dark Padding=Padding.Is2 Border=Border.RoundedTop>
+                    Asset detail provides comprehensive history on the work orders performed for this unit in addition to common information.
+                </Small>
+            </CarouselSlide>
+        </Carousel>
+    };
+
+    private static readonly RenderFragment CarouselSys = __builder =>
+    {
+        <Carousel Autoplay=false>
+            <CarouselSlide Name="tracker-list">
+                <Anchor To="img/apptrk/sys/tracker-list.png" Target=Target.Blank>
+                    <Image Source="img/apptrk/sys/tracker-list.png" Display=Display.Block Width=Width.Is100 />
+                </Anchor>
+                <Small Position=Position.Absolute.Bottom.Is0.Start.Is50.Translate.MiddleX Background=Background.Dark Padding=Padding.Is2 Border=Border.RoundedTop>
+                    Application administrators can see all Trackers in the system.
+                    Site managers can see all Trackers for work orders being performed at their location.
+                </Small>
+            </CarouselSlide>
+
+            <CarouselSlide Name="role-setup">
+                <Anchor To="img/apptrk/sys/role-setup.png" Target=Target.Blank>
+                    <Image Source="img/apptrk/sys/role-setup.png" Display=Display.Block Width=Width.Is100 />
+                </Anchor>
+                <Small Position=Position.Absolute.Bottom.Is0.Start.Is50.Translate.MiddleX Background=Background.Dark Padding=Padding.Is2 Border=Border.RoundedTop>
+                    Roles are created to grant shop or asset management rights to users.
+                </Small>
+            </CarouselSlide>
+
+            <CarouselSlide Name="user-setup">
+                <Anchor To="img/apptrk/sys/user-setup.png" Target=Target.Blank>
+                    <Image Source="img/apptrk/sys/user-setup.png" Display=Display.Block Width=Width.Is100 />
+                </Anchor>
+                <Small Position=Position.Absolute.Bottom.Is0.Start.Is50.Translate.MiddleX Background=Background.Dark Padding=Padding.Is2 Border=Border.RoundedTop>
+                    User setup for customer asset management accounts.
+                    Internal accounts are authenticated by Windows Active Directory.
+                </Small>
+            </CarouselSlide>
+        </Carousel>
+    };
+}
