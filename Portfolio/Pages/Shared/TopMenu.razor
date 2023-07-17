@@ -1,0 +1,54 @@
+﻿<Bar Breakpoint=Breakpoint.Tablet Background=Background.Dark Shadow=Shadow.Default ThemeContrast=ThemeContrast.Dark Padding=Padding.Is3.OnX>
+    <BarBrand>
+        <BarItem>
+            <BarLink To="/">
+                Drew Cavanaugh
+            </BarLink>
+        </BarItem>
+    </BarBrand>
+    <BarToggler />
+    <BarMenu>
+        <BarStart>
+            <BarItem>
+                <BarDropdown>
+                    <BarDropdownToggle>
+                        Projects
+                    </BarDropdownToggle>
+                    <BarDropdownMenu>
+                        <!-- Invoice Indexting project -->
+                        <BarDropdownItem To="/projects/invoice-indexing">
+                            Invoice Indexing
+                        </BarDropdownItem>
+
+                        <!-- OEM Inventory Management project -->
+                        <BarDropdownItem To="/projects/oem-inventory">
+                            OEM Inventory Management
+                        </BarDropdownItem>
+
+                        <!-- Approval Tracking project -->
+                        <BarDropdownItem To="/projects/approval-tracking">
+                            Repair Approvals &amp; Tracking
+                        </BarDropdownItem>
+
+                        <!-- Parts Requisitons -->
+                        <BarDropdownItem To="/projects/parts-ordering">
+                            Parts Requisitions
+                        </BarDropdownItem>
+                    </BarDropdownMenu>
+                </BarDropdown>
+            </BarItem>
+        </BarStart>
+        <BarEnd>
+            <BarItem>
+                <BarLink To="/DC_Resume.pdf" download="Drew Cavanaugh Resume.pdf">
+                    Resume
+                </BarLink>
+            </BarItem>
+            <BarItem>
+                <BarLink To="https://github.com/drewcav96/Portfolio-Site">
+                    GitHub
+                </BarLink>
+            </BarItem>
+        </BarEnd>
+    </BarMenu>
+</Bar>

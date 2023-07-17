@@ -1,5 +1,6 @@
 ﻿.transition {
     position: absolute;
+    overflow-x: hidden;
 }
 
 .transitioned {
@@ -8,4 +9,5 @@
 
 .transitioned_behind {
     z-index: 0;
+    overflow: hidden;
 }

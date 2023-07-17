@@ -1,63 +1,189 @@
 ﻿@page "/projects/oem-inventory"
 
-<Hero>
-    <Title>
-        OEM Inventory Management
-    </Title>
-    <Subtitle>
-        Custom OEM lifecycle intranet management suite with workflow automation and reporting anayltics.
-    </Subtitle>
-</Hero>
+<!-- Heading -->
+
+<Heading Size=HeadingSize.Is2 Margin=Margin.Is2.OnY TextColor=TextColor.Light>
+    OEM Inventory Management
+</Heading>
+<Lead Margin=Margin.Is3.OnY>
+    Custom OEM lifecycle intranet management suite with workflow automation and reporting anayltics.
+</Lead>
 
 <!-- Summary -->
-<Section>
-    <Title>
-        Project Summary
-    </Title>
-    <Content>
-        <p class="my-4">
-            <span class="has-text-weight-semibold">
-                Operational Goals:
-            </span>
-            <ul>
-                <li>
-                    Eliminate paperwork and overuse of spreadsheets for maintaining company &quot;drop lots&quot; of used OEM semi-trucks.
-                </li>
-                <li>
-                    Automate arrival and departure procedure from customer emails using text pattern matching and business logic.
-                </li>
-                <li>
-                    Provide daily and weekly status overviews with relevant metrics and trends for branch managers and their clients.
-                </li>
-                <li>
-                    Enable features such as departure staging, monthly inspections, diesel filter replacement logging, pickup notices, and more.
-                </li>
-            </ul>
-        </p>
+<Paragraph Margin=Margin.Is3.OnY>
+    The business was originally encumbered with massive spreadsheets and stacks of paperwork which was mostly redundant.
+    This project eliminated the need for all of that and drastically improved workflow efficiency with intake, maintenance, and staging procedures for truck lots.
+    Customer correspondance regarding incoming and outgoing units is scanned to automatically apply move notices without need for additional user input.
+    The solution integrates with on-premise FMIS software to supply real-time work order details.
+</Paragraph>
 
-        <p class="my-4">
-            <span class="has-text-weight-semibold">
-                Technologies Used:
-            </span>
-            <ul>
-                <li>
-                    ASP.NET Core MVC 6.x
-                </li>
-                <li>
-                    Active Directory Authentication &amp; Authorization
-                </li>
-                <li>
-                    SQL Server with Entity Framework data layer
-                </li>
-                <li>
-                    Bootstrap UI/UX design
-                </li>
-                <li>
-                    3PLs: MailKit, Serilog, MS Office Interop
-                </li>
-            </ul>
-        </p>
-    </Content>
-</Section>
+<!-- Breakdown -->
+<Row>
+    <Column ColumnSize=ColumnSize.IsHalf.OnTablet>
+        <!-- Operational Goals -->
+        <Card Background=Background.Primary Margin=Margin.Is3.OnY>
+            <CardBody>
+                <CardTitle Size=4>
+                    <Icon Name=Blazorise.Icons.FontAwesome.FontAwesomeIcons.Bullseye />
+                    Operational Goals
+                </CardTitle>
+                <CardText>
+                    <UnorderedList>
+                        <UnorderedListItem>
+                            Eliminate paperwork and overuse of spreadsheets for maintaining company &quot;drop lots&quot; of used OEM semi-trucks.
+                        </UnorderedListItem>
+                        <UnorderedListItem>
+                            Automate arrival and departure procedure from customer emails using RegEx pattern matching and business logic.
+                        </UnorderedListItem>
+                        <UnorderedListItem>
+                            Provide daily and weekly status overviews with relevant metrics and trends for branch managers and their clients.
+                        </UnorderedListItem>
+                        <UnorderedListItem>
+                            Enable features such as departure staging, monthly inspections, diesel filter replacement logging, pickup notices, and more.
+                        </UnorderedListItem>
+                    </UnorderedList>
+                </CardText>
+            </CardBody>
+        </Card>
+    </Column>
 
-<!-- Carousel -->
+    <Column ColumnSize=ColumnSize.IsHalf.OnTablet>
+        <!-- Technologies Used -->
+        <Card Background=Background.Secondary Margin=Margin.Is3.OnY>
+            <CardBody>
+                <CardTitle Size=4>
+                    <Icon Name=Blazorise.Icons.FontAwesome.FontAwesomeIcons.Cogs />
+                    Technologies
+                </CardTitle>
+                <CardText>
+                    <UnorderedList>
+                        <UnorderedListItem>
+                            ASP.NET Core MVC 6.x
+                        </UnorderedListItem>
+                        <UnorderedListItem>
+                            Active Directory Authentication &amp; Authorization
+                        </UnorderedListItem>
+                        <UnorderedListItem>
+                            SQL Server with Entity Framework data layer
+                        </UnorderedListItem>
+                        <UnorderedListItem>
+                            Bootstrap UI/UX design
+                        </UnorderedListItem>
+                        <UnorderedListItem>
+                            3PLs: MailKit, Serilog, MS Office Interop
+                        </UnorderedListItem>
+                    </UnorderedList>
+                </CardText>
+            </CardBody>
+        </Card>
+    </Column>
+</Row>
+
+<!-- Showcase -->
+<Div Margin=Margin.Is3.OnY Background=Background.Light Border=Border.RoundedTop Padding=Padding.Is2.OnY.FromTop.OnTablet.Is3.OnX.OnTablet>
+    @CarouselOEM
+</Div>
+
+@code {
+    private static readonly RenderFragment CarouselOEM = __builder =>
+    {
+        <Carousel Autoplay=false>
+            <CarouselSlide Name="lot-overview">
+                <Anchor To="img/oem/lot-overview.png" Target=Target.Blank>
+                    <Image Source="img/oem/lot-overview.png" Display=Display.Block Width=Width.Is100 />
+                </Anchor>
+                <Small Position=Position.Absolute.Bottom.Is0.Start.Is50.Translate.MiddleX Background=Background.Dark Padding=Padding.Is2 Border=Border.RoundedTop>
+                    Overview screen for an inventory lot, organizing units into rows and slots.
+                    The application manages assignment of slots depending on unit state, so no manual entries by the user are necessary.
+                </Small>
+            </CarouselSlide>
+
+            <CarouselSlide Name="lot-report">
+                <Anchor To="img/oem/lot-overview.png" Target=Target.Blank>
+                    <Image Source="img/oem/lot-report.png" Display=Display.Block Width=Width.Is100 />
+                </Anchor>
+                <Small Position=Position.Absolute.Bottom.Is0.Start.Is50.Translate.MiddleX Background=Background.Dark Padding=Padding.Is2 Border=Border.RoundedTop>
+                    Weekly lot report for customer-defined metrics.
+                    Report can go back to a previous week in time.
+                </Small>
+            </CarouselSlide>
+
+            <CarouselSlide Name="arrival-list">
+                <Anchor To="img/oem/lot-overview.png" Target=Target.Blank>
+                    <Image Source="img/oem/arrival-list.png" Display=Display.Block Width=Width.Is100 />
+                </Anchor>
+                <Small Position=Position.Absolute.Bottom.Is0.Start.Is50.Translate.MiddleX Background=Background.Dark Padding=Padding.Is2 Border=Border.RoundedTop>
+                    List of inbound units for this lot.
+                    Arrivals can be manually entered, but most are automatically created from an external data source.
+                </Small>
+            </CarouselSlide>
+
+            <CarouselSlide Name="inv-list">
+                <Anchor To="img/oem/lot-overview.png" Target=Target.Blank>
+                    <Image Source="img/oem/inv-list.png" Display=Display.Block Width=Width.Is100 />
+                </Anchor>
+                <Small Position=Position.Absolute.Bottom.Is0.Start.Is50.Translate.MiddleX Background=Background.Dark Padding=Padding.Is2 Border=Border.RoundedTop>
+                    Inventory list displays all units in storage at this lot.
+                    Results can be filtered, ordered, and paginated at the database layer before rendering for optimal performance.
+                </Small>
+            </CarouselSlide>
+
+            <CarouselSlide Name="unit-detail">
+                <Anchor To="img/oem/lot-overview.png" Target=Target.Blank>
+                    <Image Source="img/oem/unit-detail.png" Display=Display.Block Width=Width.Is100 />
+                </Anchor>
+                <Small Position=Position.Absolute.Bottom.Is0.Start.Is50.Translate.MiddleX Background=Background.Dark Padding=Padding.Is2 Border=Border.RoundedTop>
+                    Inventory unit detail displays in-depth information about an asset and connects data sources to centralize information.
+                </Small>
+            </CarouselSlide>
+
+            <CarouselSlide Name="unit-inspect">
+                <Anchor To="img/oem/lot-overview.png" Target=Target.Blank>
+                    <Image Source="img/oem/unit-inspect.png" Display=Display.Block Width=Width.Is100 />
+                </Anchor>
+                <Small Position=Position.Absolute.Bottom.Is0.Start.Is50.Translate.MiddleX Background=Background.Dark Padding=Padding.Is2 Border=Border.RoundedTop>
+                    Monthly inspection checklists are be quickly entered.
+                    The application assigns units failing inspections to the work line automatically.
+                </Small>
+            </CarouselSlide>
+
+            <CarouselSlide Name="outbound-list">
+                <Anchor To="img/oem/lot-overview.png" Target=Target.Blank>
+                    <Image Source="img/oem/outbound-list.png" Display=Display.Block Width=Width.Is100 />
+                </Anchor>
+                <Small Position=Position.Absolute.Bottom.Is0.Start.Is50.Translate.MiddleX Background=Background.Dark Padding=Padding.Is2 Border=Border.RoundedTop>
+                    As external data sources notify the application of unit departures, the application automatically moves them into the Departure list.
+                </Small>
+            </CarouselSlide>
+
+            <CarouselSlide Name="unit-departure">
+                <Anchor To="img/oem/lot-overview.png" Target=Target.Blank>
+                    <Image Source="img/oem/unit-departure.png" Display=Display.Block Width=Width.Is100 />
+                </Anchor>
+                <Small Position=Position.Absolute.Bottom.Is0.Start.Is50.Translate.MiddleX Background=Background.Dark Padding=Padding.Is2 Border=Border.RoundedTop>
+                    Similar to the Unit detail, the Departure unit detail outlines additional information about the asset regarding its outbound procedure.
+                    As units leave the lot, inventory slots are freed up for inbound units.
+                </Small>
+            </CarouselSlide>
+
+            <CarouselSlide Name="priority-list">
+                <Anchor To="img/oem/lot-overview.png" Target=Target.Blank>
+                    <Image Source="img/oem/priority-list.png" Display=Display.Block Width=Width.Is100 />
+                </Anchor>
+                <Small Position=Position.Absolute.Bottom.Is0.Start.Is50.Translate.MiddleX Background=Background.Dark Padding=Padding.Is2 Border=Border.RoundedTop>
+                    When the customer needs to ship out a unit quickly, priority notice can be given.
+                    This notifies the lot staff to expedite the outbound procedure.
+                </Small>
+            </CarouselSlide>
+
+            <CarouselSlide Name="pickup-list">
+                <Anchor To="img/oem/lot-overview.png" Target=Target.Blank>
+                    <Image Source="img/oem/pickup-list.png" Display=Display.Block Width=Width.Is100 />
+                </Anchor>
+                <Small Position=Position.Absolute.Bottom.Is0.Start.Is50.Translate.MiddleX Background=Background.Dark Padding=Padding.Is2 Border=Border.RoundedTop>
+                    When an outbound unit is assigned a pickup driver and date, they appear in the Pickup Notice list.
+                </Small>
+            </CarouselSlide>
+        </Carousel>
+    };
+}

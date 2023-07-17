@@ -1,18 +1,16 @@
-﻿html {
+﻿body {
     background: linear-gradient(to bottom right, #0a0019, #002626);
     background-repeat: no-repeat;
     background-size: 100% 100vh;
     background-attachment: fixed;
 }
 
-body {    
-    color: hsl(0, 0%, 98%);
+.tab-item, .a-img {
+    cursor: pointer;
 }
 
-nav.is-transparent {
-    background: rgb(255, 255, 255, 0.1);
-}
-
-.navbar-item, .navbar-link {
-    color: #f5f5f5;
+.modal-content {
+    background-color: rgba(0, 0, 0, 0.75);
+    position: fixed;
+    padding: 1em;
 }
